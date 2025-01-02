@@ -1,0 +1,43 @@
+<div [ngClass]="theme" class="main-container">
+    <!-- First container -->
+    <div class="search-container">
+      <input
+        type="text"
+        [(ngModel)]="city"
+        placeholder="Enter city name"
+        class="city-input"
+      />
+      <div class="buttons">
+        <button class="search-button" (click)="searchWeather()">Search</button>
+        <button class="clear-button" (click)="clearInput()">Clear</button>
+      </div>
+    </div>
+  
+    <!-- Second container -->
+    <div *ngIf="weatherData" class="weather-container">
+      <h2>{{ weatherData.name }}</h2>
+      <p>{{ weatherData.weather[0]?.description }}</p>
+      <i class="wi" [ngClass]="getWeatherIcon(weatherData.weather[0]?.id)"></i>
+      <p>{{ weatherData.main.temp }}°C</p>
+      <button class="clear-button" (click)="clearWeather()">Clear Weather</button>
+    </div>
+  
+    <!-- Third container -->
+    <div *ngIf="cityHistory.length" class="history-container">
+      <h3>Search History</h3>
+      <ul>
+        <li
+          *ngFor="let historyCity of cityHistory"
+          (click)="searchWeatherFromHistory(historyCity)"
+        >
+          {{ historyCity }}
+        </li>
+      </ul>
+      <button class="clear-button" (click)="clearHistory()">Clear History</button>
+    </div>
+  
+    <!-- Toggle-->
+    <div class="theme-toggle">
+      <button class="theme-button" (click)="toggleTheme()">Toggle Theme</button>
+    </div>
+  </div>

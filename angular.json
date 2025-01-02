@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "node_modules/weather-icons/css/weather-icons.min.css",
               "src/styles.less"
             ],
             "scripts": [],
