@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/Angular-weather-app/',
   entryPoints: {
     '': () => import('./main.server.mjs')
   },

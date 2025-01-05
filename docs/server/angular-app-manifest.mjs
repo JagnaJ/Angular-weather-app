@@ -2,18 +2,18 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/',
+  baseHref: '/Angular-weather-app/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "route": "/"
+    "route": "/Angular-weather-app"
   }
 ],
   assets: {
-    'index.csr.html': {size: 622, hash: '87c65d479c44f66c798aca6aa073e23606452563ac90c966d92fbfc36f2027a5', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1024, hash: '2d4909942205f893109dfd26abf0dc3403432069a2f6f13cd72c70a341fea89d', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'index.html': {size: 5837, hash: '2084729499b676d0303262a0be2c12d88fb597716247a12077be2d96b7303444', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 642, hash: '11b3aace3b7c4a04f5fdceff673d4466eaeca5a3a200220318f58ed13f5a7a2e', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1044, hash: '16fa9e3035417040d6f1c7426ca7a6c43c1d9351a305e3f99cbe7edb26a58919', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.html': {size: 5857, hash: '61bc53552a1e6a9860f0225984397849258e80316481bc5f5ac6bcb93ea26b18', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
     'styles-ZAYVYYH6.css': {size: 11832, hash: 'pqKc/PAC1U8', text: () => import('./assets-chunks/styles-ZAYVYYH6_css.mjs').then(m => m.default)}
   },
 };

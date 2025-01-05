@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "docs/",
             "index": "src/index.html",
+            "baseHref": "/Angular-weather-app/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
